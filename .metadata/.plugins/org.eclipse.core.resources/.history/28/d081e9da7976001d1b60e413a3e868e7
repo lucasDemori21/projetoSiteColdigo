@@ -1,0 +1,35 @@
+package br.com.coldigogeladeiras.jdbcinterface;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import br.com.coldigogeladeiras.modelo.Marca;
+
+public interface MarcaDAO {
+
+	public List<Marca> buscar(){
+
+	// Criação da instrução SQL para busca de todas as marcas
+	String comando = "SELECT * FROM marcas";
+
+	// Criação de uma lista para armazenar cada marca encontrada
+	List<Marca> listMarcas = new ArrayList<Marca>();
+
+	// Criação do objeto marca com valor null (ou seja, sem instanciá-lo)
+	Marca marca = null;
+	
+	// Abertura do try-catch
+	try {
+		
+	// Caso alguma Exception seja gerada no try, recebe-a no objeto "ex"
+	} catch (Exception ex) {
+		// Exibe a exceção na console
+		ex.printStackTrace();
+	}
+	
+	// Retorna para quem chamou o método a lista criada
+	return listMarcas;
+	
+	}
+
+}

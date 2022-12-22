@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+<link rel="stylesheet" href="estilo.css"></link>
+<script>
+	function validacao() {
+		if (document.contato.txtnome.value == "") {
+			alert("Por favor, preencha o campo 'Nome'!");
+			document.contato.nome.focus();
+			return false;
+		}
+		if (document.contato.txtendereco.value == "") {
+			alert("Por favor, preencha o campo 'Endereço'!");
+			document.contato.endereco.focus();
+			return false;
+		}
+		if (document.contato.txttelefone.value == "") {
+			alert("Por favor, preencha o campo 'Telefone'!");
+			document.contato.telefone.focus();
+			return false;
+		} else {
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+		<form name="contato" method="GET" action="insereContato"
+			onsubmit="return validacao()">
+			<fieldset class="tabela">
+				<div class="titulo">
+					<legend>Contato</legend>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Nome:</td>
+							<td><input type="text" name="nome" id="txtnome"
+								class="linha"></input></td>
+						</tr>
+						<tr>
+							<td>Endereço:</td>
+							<td><input type="text" name="endereco" id="txtendereco"
+								class="linha"></input></td>
+						</tr>
+						<tr>
+							<td>Telefone:</td>
+							<td><input type="text" name="telefone" id="txttelefone"
+								class="linha"></input></td>
+						</tr>
+					</table>
+				</div>
+				<button class="botao" type="submit" name="enviar">Enviar</button>
+				<button class="botao" type="reset" name="limpar">Limpar</button>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

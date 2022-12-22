@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\lucas\Desktop\ColdigoGeladeira-master\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+414085062.index
+7373682.index
+1370109244.index
+696237446.index
+403722300.index
+1556489877.index
